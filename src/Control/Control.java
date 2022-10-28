@@ -6,6 +6,8 @@ package Control;
 
 import Views.Vista;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 /**
  *
@@ -13,22 +15,15 @@ import java.awt.event.ActionEvent;
  */
 public class Control implements ActionListener{
     private Vista vista;
-    private DocenteDTO d;
-    private MateriaDTO m;
-    private Universidad u;
     
-    public Control(Vista vista, DocenteDTO d, MateriaDTO m, Universidad u) {
+    public Control(Vista vista) {
         this.vista=vista;
-        this.d = d;
-        this.m = m;
-        this.u=u;
         ActionListener(this);
     }
 
-    @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getActionCommand().equals("Guardar Materia")){
-        m.setCodigo(vista.txtCodigoM.getText());
+        if(e.getActionCommand().equals("Guardar")){
+        /*m.setCodigo(vista.txtCodigoM.getText());
         m.setNombre(vista.txtNombreM.getText());
         m.setCreditos(vista.txtCreditos.getText());
         m.setCodProfesor(vista.txtCodProfesor.getText());
@@ -38,8 +33,9 @@ public class Control implements ActionListener{
         vista.txtCodigoM.setText("");
         vista.txtNombreM.setText("");
         vista.txtCreditos.setText("");
-        vista.txtCodProfesor.setText("");
-        }
+        vista.txtCodProfesor.setText("");*/
+        System.out.println("holaaaa");
+        }/*
         if(e.getActionCommand().equals("Buscar Materia")){
             MateriaDTO ma = u.buscarMateria(vista.txtCodigoM.getText());
             vista.txtCodigoM.setText(ma.getCodigo());
@@ -72,19 +68,19 @@ public class Control implements ActionListener{
             
         }
         if(e.getActionCommand().equals("Registrar Materia")){
-        }
+        }*/
         
     }
       
 
     private void ActionListener(Control control) {
-        vista.jbGuardarM.addActionListener(control);
-        vista.jbBuscarM.addActionListener(control);
+        vista.btnGuardar.addActionListener(control);
+        /*vista.jbBuscarM.addActionListener(control);
         vista.jbRegistrarDocente.addActionListener(control);
         
         vista.jbGuardar.addActionListener(control);
         vista.jbBuscar.addActionListener(control);
-        vista.jbRegistrarMateria.addActionListener(control);
+        vista.jbRegistrarMateria.addActionListener(control);*/
         
     }
 }

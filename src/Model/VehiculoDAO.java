@@ -4,18 +4,10 @@
  */
 package Model;
 
-import Control.Control;
-import Views.Vista;
-
 /**
  *
  * @author kevin
  */
-public class Principal {
-    public static void main(String[] args) {
-        Vista vista= new Vista();
-        Control control = new  Control(vista);
-        vista.setVisible(true);
-    }
+public class VehiculoDAO {
     
 }
