@@ -12,6 +12,9 @@ import Views.Vista;
  * @author kevin
  */
 public class Principal {
+    
+    /* Hola */
+    
     public static void main(String[] args) {
         Vista vista= new Vista();
         Control control = new  Control(vista);
